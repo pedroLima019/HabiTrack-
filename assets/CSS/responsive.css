@@ -1,0 +1,22 @@
+@media (max-width: 768px) {
+  .main_content {
+    text-align: center;
+    margin: 10px 0px;
+  }
+}
+@media (max-width: 425px) {
+  .sidebar {
+    width: 65px;
+    padding: 6px 6px;
+  }
+
+  .main_content {
+    text-align: center;
+    margin: 10px 0px;
+  }
+
+  .main_content h1 {
+    font-size: 20px;
+    margin: 10px;
+  }
+}

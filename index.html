@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/CSS/global.css" />
+    <link rel="stylesheet" href="assets/CSS/responsive.css" />
+
+    <!-- FullCalendar CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- JS -->
+    <script src="JS/script.js" defer></script>
+    <title>HabitLife</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sidebar" id="menu_sidebar">
+      <div class="logo_content">
+        <div class="logo">
+          <i class="bx bxs-leaf"></i>
+          <div class="logo_name">HabitLife</div>
+        </div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav_list">
+        <li>
+          <a href="#">
+            <i class="bx bx-calendar"></i>
+            <span class="links_name">Calendario</span>
+          </a>
+          <span class="tooltip">Calendario</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-doughnut-chart"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+          <span class="tooltip">Dashboard</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-user"></i>
+            <span class="links_name">Meus Hábitos</span>
+          </a>
+          <span class="tooltip">Meus Hábitos</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-history"></i>
+            <span class="links_name">Histórico</span>
+          </a>
+          <span class="tooltip">Histórico</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-list-check"></i>
+            <span class="links_name">Desafios</span>
+          </a>
+          <span class="tooltip">Desafios</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-cog"></i>
+            <span class="links_name">Configurações</span>
+          </a>
+          <span class="tooltip">Configurações</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-user-circle"></i>
+            <span class="links_name">Perfil</span>
+          </a>
+          <span class="tooltip">Home</span>
+        </li>
+      </ul>
+      <div class="profile_content">
+        <div class="profile">
+          <div class="profile_details">
+            <img src="assets/img/user.jpg" alt="foto de perfil" />
+            <div class="name_category">
+              <div class="name">Pedro Lima</div>
+              <div class="category">Runner</div>
+            </div>
+          </div>
+          <i class="bx bx-log-out" id="log_out"></i>
+        </div>
+      </div>
+    </div>
+    <main class="main_content">
+      <div id="calendar"></div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+  </body>
+</html>
