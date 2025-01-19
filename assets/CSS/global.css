@@ -17,6 +17,10 @@
   --color-black: #000000;
 }
 
+html {
+  height: 100%; /* Garante que o corpo ocupe apenas a altura visível */
+}
+
 body {
   position: relative;
   width: 100%;
@@ -26,7 +30,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 100vh;
   width: 78px;
   background: var(--color-primary);
   padding: 6px 14px;
@@ -262,7 +266,7 @@ body {
 }
 
 .fc-event {
-  font-size: 12px; 
+  font-size: 12px;
 }
 
 .fc .fc-toolbar.fc-header-toolbar {

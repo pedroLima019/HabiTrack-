@@ -28,8 +28,8 @@
 }
 @media (max-width: 425px) {
   .sidebar {
-    width: 65px;
-    padding: 0.8rem;
+    width: 55px;
+    padding: 0.1rem;
   }
 
   .logo_content .logo .logo_name {
@@ -43,7 +43,7 @@
   }
   .sidebar.active #btn {
     left: 85%;
-    margin: 5px 0;
+    margin: 4px 0;
   }
 
   .sidebar ul li a {
@@ -55,9 +55,29 @@
     width: 180px;
   }
 
+  .sidebar.active .profile #log_out {
+    left: 85%;
+  }
+
   .sidebar.active ~ .main_content {
     width: calc(100% - 20px);
     left: 200px;
+  }
+
+  .profile .profile_details img {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .profile .profile_details .name {
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .profile_content .profile {
+    padding: 10px;
   }
 
   #calendar {
@@ -86,11 +106,61 @@
     font-size: 8px;
   }
   .fc .fc-toolbar.fc-header-toolbar {
-    margin: 15px -9px;
+    margin: 15px 8px;
     width: 300px;
   }
 
   .fc .fc-col-header-cell-cushion {
     font-size: 8px;
+  }
+}
+
+@media (max-width: 375px) {
+  .sidebar {
+    width: 55px;
+    padding: 0.1rem;
+  }
+
+  .sidebar.active #btn {
+    margin: 0px 0;
+  }
+
+  .logo_content .logo i {
+    font-size: 25px;
+    margin: 0px 8px;
+  }
+
+  .fc .fc-toolbar.fc-header-toolbar {
+    margin: 15px -24px;
+    width: 300px;
+  }
+
+  .fc .fc-scrollgrid-liquid {
+    margin: 0px -10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .sidebar {
+    width: 55px;
+    padding: 0.1rem;
+  }
+
+  #calendar {
+    padding: 0.5rem;
+  }
+
+  .fc .fc-toolbar-title {
+    font-size: 8px;
+    margin: 0;
+  }
+
+  .fc .fc-toolbar.fc-header-toolbar {
+    margin: 15px -21px;
+    width: 250px;
+  }
+
+  .fc .fc-scrollgrid-liquid {
+    margin: 0px -10px;
   }
 }
