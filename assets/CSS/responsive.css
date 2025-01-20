@@ -10,20 +10,27 @@
     padding: 1rem;
   }
 
+  .sidebar {
+    width: 60px;
+    padding: 0.3rem;
+  }
   .fc-event {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .fc .fc-toolbar-title {
-    font-size: 15px;
+    font-size: 20px;
   }
 
+  .fc .fc-toolbar.fc-header-toolbar {
+    margin-bottom: 3em;
+  }
   .fc-direction-ltr .fc-button-group > .fc-button:not(:last-child) {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .fc-direction-ltr .fc-toolbar > * > :not(:first-child) {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 @media (max-width: 425px) {
@@ -106,12 +113,16 @@
     font-size: 8px;
   }
   .fc .fc-toolbar.fc-header-toolbar {
-    margin: 15px 8px;
+    margin: 15px -3px;
     width: 300px;
   }
 
   .fc .fc-col-header-cell-cushion {
     font-size: 8px;
+  }
+
+  .fc .fc-scrollgrid-liquid {
+    margin: 0px -10px;
   }
 }
 
@@ -142,8 +153,8 @@
 
 @media (max-width: 320px) {
   .sidebar {
-    width: 55px;
-    padding: 0.1rem;
+    width: 50px;
+    padding: 0;
   }
 
   #calendar {
@@ -156,11 +167,11 @@
   }
 
   .fc .fc-toolbar.fc-header-toolbar {
-    margin: 15px -21px;
-    width: 250px;
+    margin: 15px -22px;
+    width: 245px;
   }
 
   .fc .fc-scrollgrid-liquid {
-    margin: 0px -10px;
+    margin: 0px -15px;
   }
 }
