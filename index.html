@@ -22,6 +22,7 @@
 
     <!-- JS -->
     <script src="JS/script.js" defer></script>
+
     <title>HabitLife</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -100,8 +101,57 @@
     </div>
     <main class="main_content">
       <div id="calendar"></div>
+      <div id="eventModal" class="modal">
+        <div class="modal-content">
+          <span class="close" aria-label="Fechar">&times;</span>
+          <h3>Adicionar Nova Tarefa</h3>
+          <form id="eventForm">
+            <div class="form-group">
+              <label for="eventTitle">Título da Tarefa</label>
+              <input
+                type="text"
+                id="eventTitle"
+                placeholder="Título da Tarefa"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="eventStart">Data de Início</label>
+              <input type="date" id="eventStart" required />
+            </div>
+            <div class="form-group">
+              <label for="eventStartTime">Hora de Início</label>
+              <input type="time" id="eventStartTime" required />
+            </div>
+            <div class="form-group">
+              <label for="eventEnd">Data de Término</label>
+              <input type="date" id="eventEnd" />
+            </div>
+            <div class="form-group">
+              <label for="eventEndTime">Hora de Término</label>
+              <input type="time" id="eventEndTime" />
+            </div>
+            <button type="button" id="addEventButton" class="btn">
+              Adicionar Evento
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div id="viewEventModal" class="modal">
+        <div class="modal-content">
+          <span class="close" aria-label="Fechar">&times;</span>
+          <h3>Detalhes da Tarefa</h3>
+          <p><strong>Título:</strong> <span id="viewEventTitle"></span></p>
+          <p><strong>Data e Hora de Início:</strong> <span id="viewEventStart"></span></p>
+          <p><strong>Data e Hora de Término:</strong> <span id="viewEventEnd"></span></p>
+          <button type="button" id="editEventButton" class="btn">
+            Editar
+          </button>
+        </div>
+      </div>
+      
     </main>
-
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
   </body>
 </html>

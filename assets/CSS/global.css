@@ -30,7 +30,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
+  height: 100%;
   width: 78px;
   background: var(--color-primary);
   padding: 6px 14px;
@@ -290,4 +290,79 @@ body {
   border: none;
   margin-left: 0.2rem;
   background: var(--color-primary);
+}
+
+/* Estilos para o modal personalizado */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.322);
+}
+
+.modal-content {
+  background-color: #ffffff;
+  margin: 5rem auto;
+  padding: 2rem;
+  width: 50%;
+  border-radius: 10px;
+}
+
+.modal-content h3 {
+  color: var(--color-primary);
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.close {
+  color: var(--color-primary);
+  font-size: 30px;
+  float: right;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  cursor: pointer;
+}
+.form-group {
+  margin: 14px 0;
+}
+.form-group label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.form-group input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  outline: none;
+}
+
+.form-group input::placeholder {
+  font-size: 12px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  padding: 8px;
+  font-size: 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px auto;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  background-color: #00356e;
 }
