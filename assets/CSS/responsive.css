@@ -37,6 +37,51 @@
   .fc-direction-ltr .fc-toolbar > * > :not(:first-child) {
     font-size: 12px;
   }
+
+  .modal-content {
+    padding: 1rem;
+    margin: 8rem auto;
+  }
+
+  .modal-content h3 {
+    font-size: 15px;
+  }
+
+  .close {
+    margin: -1px 0;
+  }
+
+  .modal-content p,
+  strong,
+  span {
+    font-size: 12px;
+    margin: 5px 0;
+  }
+
+  .modal-content .btn {
+    width: 150px;
+    padding: 5px;
+    margin: 10px auto;
+  }
+
+  .form-group {
+    margin: 10px 0px;
+  }
+
+  .form-group label {
+    font-size: 12px;
+    margin-bottom: 1px;
+  }
+
+  .form-group input {
+    padding: 1px;
+    border-radius: 5px;
+  }
+
+  .form-group input[type="date"],
+  input[type="time"] {
+    font-size: 12px; /* Define o tamanho da fonte */
+  }
 }
 @media (max-width: 425px) {
   .sidebar {
@@ -129,6 +174,53 @@
   .fc .fc-scrollgrid-liquid {
     margin: 0px -10px;
   }
+
+  .modal-content {
+    width: 80%;
+    padding: 0.8rem;
+    margin: 5rem auto;
+  }
+
+  .modal-content h3 {
+    font-size: 12px;
+  }
+
+  .modal-content .btn {
+    width: 150px;
+    padding: 3px;
+    font-size: 10px;
+    margin: 15px auto;
+  }
+
+  .close {
+    font-size: 25px;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    margin: 8px 0;
+  }
+
+  .form-group {
+    margin: 5px 0px;
+  }
+
+  .form-group label {
+    font-size: 10px;
+  }
+
+  .form-group input {
+    padding: 0;
+    width: 90%;
+  }
+
+  .form-group input[type="date"],
+  input[type="time"] {
+    font-size: 10px; /* Define o tamanho da fonte */
+  }
+
+  .form-group input::placeholder {
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 375px) {
@@ -148,11 +240,42 @@
 
   .fc .fc-toolbar.fc-header-toolbar {
     margin: 10px -15px;
-    width: 270px;
+    width: 280px;
   }
 
   .fc .fc-scrollgrid-liquid {
     margin: 0px -10px;
+  }
+
+  .modal-content {
+    width: 80%;
+    padding: 0.8rem;
+    margin: 6rem auto;
+  }
+
+  .modal-content h3 {
+    font-size: 15px;
+  }
+
+  .modal-content .close {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+  }
+
+  .modal-content p,
+  strong,
+  span {
+    font-size: 10px;
+    margin: 5px 0;
+  }
+
+  .form-group {
+    margin: 8px 0;
+  }
+  .form-group label {
+    font-size: 10px;
+    margin: 0;
   }
 }
 
