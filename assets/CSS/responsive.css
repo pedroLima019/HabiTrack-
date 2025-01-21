@@ -28,14 +28,15 @@
   }
 
   .fc .fc-toolbar.fc-header-toolbar {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
+
   .fc-direction-ltr .fc-button-group > .fc-button:not(:last-child) {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .fc-direction-ltr .fc-toolbar > * > :not(:first-child) {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .modal-content {
@@ -80,7 +81,7 @@
 
   .form-group input[type="date"],
   input[type="time"] {
-    font-size: 12px; /* Define o tamanho da fonte */
+    font-size: 12px;
   }
 }
 @media (max-width: 425px) {
@@ -177,8 +178,8 @@
 
   .modal-content {
     width: 80%;
-    padding: 0.8rem;
-    margin: 5rem auto;
+    padding: 1rem;
+    margin: 6rem auto;
   }
 
   .modal-content h3 {
@@ -189,7 +190,7 @@
     width: 150px;
     padding: 3px;
     font-size: 10px;
-    margin: 15px auto;
+    margin: 12px auto;
   }
 
   .close {
@@ -197,7 +198,7 @@
     width: 20px;
     height: 20px;
     font-size: 20px;
-    margin: 8px 0;
+    margin: 7px 0;
   }
 
   .form-group {
@@ -215,7 +216,7 @@
 
   .form-group input[type="date"],
   input[type="time"] {
-    font-size: 10px; /* Define o tamanho da fonte */
+    font-size: 10px; 
   }
 
   .form-group input::placeholder {
