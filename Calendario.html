@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/styles/Calendario.css" />
+    <link rel="stylesheet" href="assets/styles/responsive.css" />
+
+    <!-- FullCalendar CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- boxIcons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- JS -->
+    <script src="JS/app.js" defer></script>
+    <script src="JS/calendario.js"></script>
+
+    <title>HabitLife - Calendário</title>
+  </head>
+  <body>
+    <div class="sidebar" id="menu_sidebar">
+      <div class="logo_content">
+        <div class="logo">
+          <i class="bx bxs-leaf"></i>
+          <div class="logo_name">HabitLife</div>
+        </div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav_list">
+        <li>
+          <a href="#">
+            <i class="bx bx-calendar"></i>
+            <span class="links_name">Calendario</span>
+          </a>
+          <span class="tooltip">Calendario</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-doughnut-chart"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+          <span class="tooltip">Dashboard</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-user"></i>
+            <span class="links_name">Meus Hábitos</span>
+          </a>
+          <span class="tooltip">Meus Hábitos</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-history"></i>
+            <span class="links_name">Histórico</span>
+          </a>
+          <span class="tooltip">Histórico</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-list-check"></i>
+            <span class="links_name">Desafios</span>
+          </a>
+          <span class="tooltip">Desafios</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-cog"></i>
+            <span class="links_name">Configurações</span>
+          </a>
+          <span class="tooltip">Configurações</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-user-circle"></i>
+            <span class="links_name">Perfil</span>
+          </a>
+          <span class="tooltip">Home</span>
+        </li>
+      </ul>
+      <div class="profile_content">
+        <div class="profile">
+          <div class="profile_details">
+            <img src="assets/img/user.jpg" alt="foto de perfil" />
+            <div class="name_category">
+              <div class="name">Pedro Lima</div>
+              <div class="category">Runner</div>
+            </div>
+          </div>
+          <i class="bx bx-log-out" id="log_out"></i>
+        </div>
+      </div>
+    </div>
+    <main class="main_content">
+      <div id="calendar"></div>
+      <div id="eventModal" class="modal">
+        <div class="modal-content">
+          <span class="close" aria-label="Fechar">&times;</span>
+          <h3>Adicionar Nova Tarefa</h3>
+          <form id="eventForm">
+            <div class="form-group">
+              <label for="eventTitle">Título da Tarefa</label>
+              <input
+                type="text"
+                id="eventTitle"
+                placeholder="Título da Tarefa"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="eventStart">Data de Início</label>
+              <input type="date" id="eventStart" required />
+            </div>
+            <div class="form-group">
+              <label for="eventStartTime">Hora de Início</label>
+              <input type="time" id="eventStartTime" required />
+            </div>
+            <div class="form-group">
+              <label for="eventEnd">Data de Término</label>
+              <input type="date" id="eventEnd" />
+            </div>
+            <div class="form-group">
+              <label for="eventEndTime">Hora de Término</label>
+              <input type="time" id="eventEndTime" />
+            </div>
+            <button type="button" id="addEventButton" class="btn">
+              Adicionar Evento
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div id="viewEventModal" class="modal">
+        <div class="modal-content">
+          <span class="close" aria-label="Fechar">&times;</span>
+          <h3>Detalhes da Tarefa</h3>
+          <p><strong>Título:</strong> <span id="viewEventTitle"></span></p>
+          <p>
+            <strong>Data e Hora de Início:</strong>
+            <span id="viewEventStart"></span>
+          </p>
+          <p>
+            <strong>Data e Hora de Término:</strong>
+            <span id="viewEventEnd"></span>
+          </p>
+          <button type="button" id="editEventButton" class="btn">Editar</button>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+  </body>
+</html>

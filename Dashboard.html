@@ -1,30 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/CSS/global.css" />
-    <link rel="stylesheet" href="assets/CSS/responsive.css" />
+    <link rel="stylesheet" href="assets/styles/dashboard.css" />
+    <link rel="stylesheet" href="assets/styles/responsive.css" />
 
-    <!-- FullCalendar CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css"
-      rel="stylesheet"
-    />
+    <!-- JS -->
+    <script src="JS/app.js" defer></script>
+    <script src="JS/dashboard.js" defer></script>
 
-    <!-- Font Awesome -->
+    <!-- boxIcons -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
 
-    <!-- JS -->
-    <script src="JS/script.js" defer></script>
-
-    <title>HabitLife</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Habitrack - Dashboard</title>
   </head>
   <body>
     <div class="sidebar" id="menu_sidebar">
@@ -100,58 +94,20 @@
       </div>
     </div>
     <main class="main_content">
-      <div id="calendar"></div>
-      <div id="eventModal" class="modal">
-        <div class="modal-content">
-          <span class="close" aria-label="Fechar">&times;</span>
-          <h3>Adicionar Nova Tarefa</h3>
-          <form id="eventForm">
-            <div class="form-group">
-              <label for="eventTitle">Título da Tarefa</label>
-              <input
-                type="text"
-                id="eventTitle"
-                placeholder="Título da Tarefa"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="eventStart">Data de Início</label>
-              <input type="date" id="eventStart" required />
-            </div>
-            <div class="form-group">
-              <label for="eventStartTime">Hora de Início</label>
-              <input type="time" id="eventStartTime" required />
-            </div>
-            <div class="form-group">
-              <label for="eventEnd">Data de Término</label>
-              <input type="date" id="eventEnd" />
-            </div>
-            <div class="form-group">
-              <label for="eventEndTime">Hora de Término</label>
-              <input type="time" id="eventEndTime" />
-            </div>
-            <button type="button" id="addEventButton" class="btn">
-              Adicionar Evento
-            </button>
-          </form>
+      <div class="dashboard">
+        <div class="filters">
+          <button id="day">Hoje</button>
+          <button id="week">Semana</button>
+          <button id="month">Mês</button>
+          <button id="year">Ano</button>
+        </div>
+
+        <div class="chart">
+          <canvas id="myChart" width="500px" height="500px"></canvas>
         </div>
       </div>
-      
-      <div id="viewEventModal" class="modal">
-        <div class="modal-content">
-          <span class="close" aria-label="Fechar">&times;</span>
-          <h3>Detalhes da Tarefa</h3>
-          <p><strong>Título:</strong> <span id="viewEventTitle"></span></p>
-          <p><strong>Data e Hora de Início:</strong> <span id="viewEventStart"></span></p>
-          <p><strong>Data e Hora de Término:</strong> <span id="viewEventEnd"></span></p>
-          <button type="button" id="editEventButton" class="btn">
-            Editar
-          </button>
-        </div>
-      </div>
-      
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
   </body>
 </html>

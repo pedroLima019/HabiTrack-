@@ -1,9 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const sidebarBtn = document.getElementById("menu_sidebar");
-  sidebarBtn.addEventListener("click", () => {
-    sidebarBtn.classList.toggle("active");
-  });
-
   const calendarEl = document.getElementById("calendar");
   const modal = document.getElementById("eventModal");
   const viewModal = document.getElementById("viewEventModal");

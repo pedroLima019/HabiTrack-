@@ -83,6 +83,11 @@
   input[type="time"] {
     font-size: 12px;
   }
+
+  canvas .myChart{
+     width: 500px;
+     height: 500px;
+  }
 }
 @media (max-width: 425px) {
   .sidebar {
