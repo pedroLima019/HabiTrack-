@@ -11,15 +11,15 @@ document.addEventListener("DOMContentLoaded", function () {
     locale: "pt-br",
     initialView: "dayGridMonth",
     headerToolbar: {
-      left: "prev, today,",
+      left: "prev, today",
       center: "title",
-      end: "dayGridMonth, timeGridWeek, timeGridDay, next",
+      right: "dayGridMonth,timeGridWeek,timeGridDay,next",
     },
     buttonText: {
       today: "Hoje",
-      month: "mês",
-      week: "semana",
-      day: "dia",
+      month: "Mês",
+      week: "Semana",
+      day: "Dia",
     },
     dateClick: function (info) {
       modal.style.display = "block";
@@ -76,17 +76,20 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      if (selectedEvent) {
-        selectedEvent.setProp("title", title);
-        selectedEvent.setStart(`${start}T${startTime}`);
-        selectedEvent.setEnd(end && endTime ? `${end}T${endTime}` : null);
-      } else {
-        calendar.addEvent({
-          title: title,
-          start: `${start}T${startTime}`,
-          end: end && endTime ? `${end}T${endTime}` : null,
-        });
-      }
+      const eventData = {
+        title,
+        start: `${start}T${startTime}`,
+        end: end && endTime ? `${end}T${endTime}` : null,
+      };
+
+ 
+      let habits = JSON.parse(localStorage.getItem("habits")) || [];
+      habits.push(eventData);
+      localStorage.setItem("habits", JSON.stringify(habits));
+
+
+      calendar.addEvent(eventData);
+
 
       modal.style.display = "none";
       document.getElementById("eventForm").reset();
@@ -114,4 +117,10 @@ document.addEventListener("DOMContentLoaded", function () {
         modal.style.display = "block";
       }
     });
+
+
+  const savedHabits = JSON.parse(localStorage.getItem("habits")) || [];
+  savedHabits.forEach((habit) => {
+    calendar.addEvent(habit);
+  });
 });
