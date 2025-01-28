@@ -84,9 +84,9 @@
     font-size: 12px;
   }
 
-  canvas .myChart{
-     width: 500px;
-     height: 500px;
+  canvas .myChart {
+    width: 500px;
+    height: 500px;
   }
 }
 @media (max-width: 425px) {
@@ -193,7 +193,7 @@
 
   .modal-content .btn {
     width: 150px;
-    padding: 3px;
+    padding: 6px;
     font-size: 10px;
     margin: 12px auto;
   }
@@ -221,11 +221,16 @@
 
   .form-group input[type="date"],
   input[type="time"] {
-    font-size: 10px; 
+    font-size: 10px;
   }
 
   .form-group input::placeholder {
     font-size: 10px;
+  }
+
+  .buttons_ .btn {
+    width: 150px;
+    padding: 6px;
   }
 }
 
@@ -269,6 +274,10 @@
     font-size: 20px;
   }
 
+  .modal-content .btn {
+     padding: 3px;
+  }
+
   .modal-content p,
   strong,
   span {
@@ -282,6 +291,11 @@
   .form-group label {
     font-size: 10px;
     margin: 0;
+  }
+
+  .buttons_ .btn { 
+     width: 110px;
+     padding: 3px;
   }
 }
 

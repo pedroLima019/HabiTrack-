@@ -302,7 +302,7 @@ body {
 
 .modal-content {
   background-color: #ffffff;
-  margin: 3.5rem auto;
+  margin: 2.5rem auto;
   padding: 2rem;
   width: 50%;
   border-radius: 10px;
@@ -346,11 +346,17 @@ body {
   font-size: 12px;
 }
 
+.buttons_{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
 .btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
+  width: 250px;
   padding: 8px;
   font-size: 12px;
   font-weight: 600;

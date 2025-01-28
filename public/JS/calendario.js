@@ -11,15 +11,15 @@ document.addEventListener("DOMContentLoaded", function () {
     locale: "pt-br",
     initialView: "dayGridMonth",
     headerToolbar: {
-      left: "prev, today",
+      left: "prev, today,",
       center: "title",
-      right: "dayGridMonth,timeGridWeek,timeGridDay,next",
+      end: "dayGridMonth, timeGridWeek, timeGridDay, next",
     },
     buttonText: {
       today: "Hoje",
-      month: "Mês",
-      week: "Semana",
-      day: "Dia",
+      month: "mês",
+      week: "semana",
+      day: "dia",
     },
     dateClick: function (info) {
       modal.style.display = "block";
@@ -61,39 +61,47 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document
-    .getElementById("addEventButton")
-    .addEventListener("click", function () {
-      const title = document.getElementById("eventTitle").value.trim();
-      const start = document.getElementById("eventStart").value.trim();
-      const startTime = document.getElementById("eventStartTime").value.trim();
-      const end = document.getElementById("eventEnd").value.trim();
-      const endTime = document.getElementById("eventEndTime").value.trim();
+  .getElementById("addEventButton")
+  .addEventListener("click", async function () {
+    const title = document.getElementById("eventTitle").value.trim();
+    const start = document.getElementById("eventStart").value.trim();
+    const startTime = document.getElementById("eventStartTime").value.trim();
+    const end = document.getElementById("eventEnd").value.trim();
+    const endTime = document.getElementById("eventEndTime").value.trim();
 
-      if (!title || !start || !startTime) {
-        alert(
-          "Por favor, preencha todos os campos obrigatórios (Título, Data e Hora de Início)."
-        );
-        return;
-      }
+    // Validação dos campos obrigatórios
+    if (!title || !start || !startTime) {
+      alert(
+        "Por favor, preencha todos os campos obrigatórios (Título, Data e Hora de Início)."
+      );
+      return;
+    }
 
-      const eventData = {
-        title,
-        start: `${start}T${startTime}`,
-        end: end && endTime ? `${end}T${endTime}` : null,
-      };
 
+    const startDateTime = `${start}T${startTime}`;
+    const endDateTime = end && endTime ? `${end}T${endTime}` : null;
+
+    const eventData = {
+      title: title,
+      start: startDateTime, 
+      ...(endDateTime && { end: endDateTime }),
+    };
+
+    try {
  
+      calendar.addEvent(eventData);
+
       let habits = JSON.parse(localStorage.getItem("habits")) || [];
       habits.push(eventData);
       localStorage.setItem("habits", JSON.stringify(habits));
 
-
-      calendar.addEvent(eventData);
-
-
       modal.style.display = "none";
       document.getElementById("eventForm").reset();
-    });
+    } catch (error) {
+      console.error("Erro ao adicionar o evento:", error);
+    }
+  });
+
 
   document
     .getElementById("editEventButton")
@@ -118,9 +126,26 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
+  document
+    .getElementById("removeEventBtn")
+    .addEventListener("click", function () {
+      if (selectedEvent) {
+        const confirmDelete = confirm("Tem certeza que deseja excluir ?");
 
-  const savedHabits = JSON.parse(localStorage.getItem("habits")) || [];
-  savedHabits.forEach((habit) => {
-    calendar.addEvent(habit);
-  });
+        if (confirmDelete) {
+          selectedEvent.remove();
+
+          let habits = JSON.parse(localStorage.getItem("habits")) || [];
+          habits.filter(
+            (habit) =>
+              habit.title !== selectedEvent.title ||
+              habit.start !== selectedEvent.start.toISOString()
+          );
+          localStorage.setItem("habits", JSON.stringify(habits));
+
+          viewModal.style.display = "none";
+          alert("Habito excluído com sucesso ! ");
+        }
+      }
+    });
 });
