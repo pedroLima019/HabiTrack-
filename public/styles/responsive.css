@@ -84,10 +84,6 @@
     font-size: 12px;
   }
 
-  canvas .myChart {
-    width: 500px;
-    height: 500px;
-  }
 }
 @media (max-width: 425px) {
   .sidebar {
@@ -275,7 +271,7 @@
   }
 
   .modal-content .btn {
-     padding: 3px;
+    padding: 3px;
   }
 
   .modal-content p,
@@ -293,9 +289,9 @@
     margin: 0;
   }
 
-  .buttons_ .btn { 
-     width: 110px;
-     padding: 3px;
+  .buttons_ .btn {
+    width: 110px;
+    padding: 3px;
   }
 }
 
